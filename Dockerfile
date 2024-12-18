@@ -9,6 +9,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get install -y mssql-server \
     && apt-get install -y mssql-server-fts \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists
+    && rm -rf /var/lib/apt/lists \
+    && /opt/mssql/bin/mssql-conf set sqlagent.enabled true
 
 CMD /opt/mssql/bin/sqlservr
