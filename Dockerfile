@@ -12,4 +12,4 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     && rm -rf /var/lib/apt/lists \
     && /opt/mssql/bin/mssql-conf set sqlagent.enabled true
 
-CMD /opt/mssql/bin/sqlservr
+CMD ["/opt/mssql/bin/sqlservr"]
